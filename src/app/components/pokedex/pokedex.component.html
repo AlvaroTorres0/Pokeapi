@@ -1,0 +1,25 @@
+<div class="principal-container">
+    
+    <div class="container-title">
+        <h1>Pokédex</h1>
+    </div>
+
+    <div class="container-pokedex">
+      <div class="card container-pokedex_item" style="width: 15rem;" *ngFor="let pokemon of pokemones">
+        <img [src]="pokemon.img" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name}}</h5>
+          <p class="card-text">Pokemon de tipo {{pokemon.type}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b><span class="stats-hp">Puntos de Salud: </span></b> <b>{{pokemon.stats.statHP.base_stat}}</b></li>
+          <li class="list-group-item"><b><span class="stats-attack">Puntos de ataque: </span></b> <b>{{pokemon.stats.statsAttack.base_stat}}</b></li>
+          <li class="list-group-item"><b><span class="stats-defense">Puntos de defensa: </span></b> <b>{{pokemon.stats.statsDefense.base_stat}}</b></li>
+          <li class="list-group-item"><b><span class="stats-speed">Velocidad: </span></b><b>{{pokemon.stats.statsSpeed.base_stat}}</b></li>
+        </ul>
+        <div class="card-body">
+          <span>Peso: {{pokemon.weight}} kg</span>
+        </div>
+      </div>
+    </div>
+</div>
